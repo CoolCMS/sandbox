@@ -1,0 +1,35 @@
+extensions:
+    webloader: WebLoader\Nette\Extension
+
+services:
+    wlCssFilter: WebLoader\Filter\CssUrlsFilter(%wwwDir%)
+
+webloader:
+    css:
+        front:
+            files:
+                - front.css
+            fileFilters:
+#                - @wlCssFilter
+            remoteFiles:
+                    - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+        admin:
+            files:
+                - admin.css
+            remoteFiles:
+                - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+
+
+    js:
+        front:
+            files:
+                - front.js
+                - %appDir%/../vendor/nette/forms/src/assets/netteForms.js
+            remoteFiles:
+                - https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+        admin:
+            files:
+                - admin.js
+            remoteFiles:
+                - https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+                - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js

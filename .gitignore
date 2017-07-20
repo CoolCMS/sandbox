@@ -1,0 +1,12 @@
+log/*
+temp/*
+vendor/*
+!.gitignore
+!web.config
+app/config/config.local.neon
+!.gitkeep
+www/webtemp/*
+!.htaccess
+.idea
+/tests/php.ini
+composer.phar

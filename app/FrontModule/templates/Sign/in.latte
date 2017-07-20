@@ -1,0 +1,24 @@
+{var $bodyClass="login"}
+{block content}
+<!--OBSAH-->
+<div class="section main">
+    <div class="wrapper">
+        <h2 class="heading1">Přihlášení</h2>
+        {form signInForm class=>'left'}
+            <div class="row">
+                <label for="input-email">E-mail</label>
+                <input id="input-email" type="text" n:name="email"/>
+            </div>
+            <div class="row">
+                <label for="input-password">Heslo</label>
+                <input id="input-password" n:name="password">
+                <a n:href=":Front:Sign:lostPassword">Zapomněli jste heslo ?</a>
+            </div>
+            <button class="button cyan">Přihlásit</button>
+        {/form}
+        <div class="right">
+            <p>Pokud již máte uživatelský účet, zde se můžete přihlásit</p>
+            <p>Pokud ještě nemáte uživatelský účet, můžete se <a n:href=":Front:Sign:upBroker">registrovat jako realitní makléř.</a></p>
+        </div>
+    </div>
+</div>

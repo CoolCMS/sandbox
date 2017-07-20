@@ -1,0 +1,3 @@
+services:
+    - CCMS\User\UserManager
+    - CCMS\User\Authenticator

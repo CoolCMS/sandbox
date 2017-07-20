@@ -1,0 +1,5 @@
+services:
+    emailTemplateService: CCMS\Email\EmailTemplateService
+    sendService: CCMS\Email\SendService
+    - CCMS\Email\Components\Templates\ITemplatesGrid
+    - CCMS\Email\Components\TemplateForm\ITemplateForm

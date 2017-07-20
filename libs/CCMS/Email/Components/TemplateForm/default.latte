@@ -1,0 +1,34 @@
+<form n:name="form">
+    {ifset $name}
+        <div class="form-group">
+            <label n:name="name">Název šablony</label>
+            <p>{$name}</p>
+        </div>
+    {/ifset}
+    <div class="form-group">
+        <label n:name="fromName">Jméno odesílatele emailu</label>
+        <input n:name="fromName" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label n:name="subject">Předmět emailu</label>
+        <input n:name="subject" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>HTML Email</label>
+
+        <textarea n:name="htmlMessage" class="form-control editor" rows="10"></textarea><br/>
+        <div class="shortcodes">
+            {foreach $shortcodes as $shortcode}
+                <p><strong>[{$shortcode['key']}]</strong> {!$shortcode['description']}</p>
+            {/foreach}
+        </div>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label n:name="textMessage">Textový email</label>
+        <textarea n:name="textMessage" class="form-control" rows="10"></textarea>
+    </div>
+    <br/>
+    <button n:name="submit" class="btn btn-block btn-primary">Ulozit sablonu</button>
+</form>

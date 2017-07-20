@@ -1,0 +1,8 @@
+parameters:
+
+doctrine:
+    user: root
+    password:
+    dbname: ccms
+    metadata:
+        SoccerDating: %appDir%/../libs

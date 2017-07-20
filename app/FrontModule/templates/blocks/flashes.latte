@@ -1,0 +1,12 @@
+{var $alertClassnames = [
+	'info' => 'alert-info',
+	'success' => 'alert-success',
+	'warning' => 'alert-warning',
+	'error' => 'alert-danger',
+]}
+{foreach $flashes as $flash}
+	{var $alertClassName = Nette\Utils\Arrays::get($alertClassnames, $flash->type, null)}
+	<div n:class="'alert', 'alert-dismissible', $alertClassName" role="alert">
+		{$flash->message}
+	</div>
+{/foreach}
